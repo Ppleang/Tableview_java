@@ -18,8 +18,8 @@ public class HelloController {
     @FXML
     public void initialize() {
         welcomeText.setText("Hello JavaFX");
-//        Image image = new Image(getClass().getResource("/images/image1.png").toString());  // แบบที่ 1
-         Image image = new Image(getClass().getResourceAsStream("/images/image1.png"));  // แบบที่ 2
+//        Image image = new Image(getClass().getResource("/images/photo.png").toString());  // แบบที่ 1
+         Image image = new Image(getClass().getResourceAsStream("/images/photo.png"));  // แบบที่ 2
         sampleImageView.setImage(image);
     }
 
