@@ -7,22 +7,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F8E4E2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.HelloController">
    <children>
-      <Button layoutX="167.0" layoutY="242.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="29.0" prefWidth="97.0" text="HOME">
+      <Button layoutX="310.0" layoutY="20.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="20.0" prefWidth="80.0" stylesheets="@btn-style.css" text="HOME" textAlignment="CENTER" textFill="#514747">
          <font>
             <Font name="Bell MT Bold" size="16.0" />
          </font>
       </Button>
-      <ImageView fx:id="sampleImageView" fitHeight="160.0" fitWidth="181.0" layoutX="140.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="405.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToListView" prefHeight="20.0" prefWidth="80.0" stylesheets="@btn-style.css" text="LIST" textAlignment="CENTER" textFill="#514747">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="500.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToTableView" prefHeight="20.0" prefWidth="80.0" stylesheets="@btn-style.css" text="TABLE" textAlignment="CENTER" textFill="#514747">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="70.0" layoutY="87.0" text="STUDENT INFORMATION">
+         <font>
+            <Font name="Bell MT Bold" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="180.0" fitWidth="169.0" layoutX="216.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/photo.png" />
          </image>
       </ImageView>
-      <Label fx:id="welcomeText" layoutX="176.0" layoutY="200.0" prefHeight="18.0" prefWidth="78.0" text="Label">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

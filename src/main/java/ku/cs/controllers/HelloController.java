@@ -10,23 +10,27 @@ import java.io.IOException;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
-
-    @FXML
-    private ImageView sampleImageView;
-
-    @FXML
-    public void initialize() {
-        welcomeText.setText("Hello JavaFX");
-//        Image image = new Image(getClass().getResource("/images/photo.png").toString());  // แบบที่ 1
-         Image image = new Image(getClass().getResourceAsStream("/images/photo.png"));  // แบบที่ 2
-        sampleImageView.setImage(image);
+    protected void onHelloButtonClick() {
+        try {
+            FXRouter.goTo("hello");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
-    protected void onHelloButtonClick() {
+    void goToListView() {
         try {
             FXRouter.goTo("student-list");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    void goToTableView() {
+        try {
+            FXRouter.goTo("students-table");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

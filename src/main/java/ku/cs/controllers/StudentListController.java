@@ -35,6 +35,7 @@ public class StudentListController {
 //        StudentHardCodeDatasource datasource = new StudentHardCodeDatasource();
 //        Datasource<StudentList> datasource = new StudentHardCodeDatasource();
 //        Datasource<StudentList> datasource = new StudentListFileDatasource("data", "student-list.csv");
+        // read data in csv file
         datasource = new StudentListFileDatasource("data", "student-list.csv");
 
         studentList = datasource.readData();
@@ -72,7 +73,7 @@ public class StudentListController {
     }
 
     @FXML
-    public void onBackButtonClick() {
+    protected void onHelloButtonClick() {
         try {
             FXRouter.goTo("hello");
         } catch (IOException e) {
@@ -81,14 +82,22 @@ public class StudentListController {
     }
 
     @FXML
-    public void goToStudentTable() {
+    void goToListView() {
+        try {
+            FXRouter.goTo("student-list");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    void goToTableView() {
         try {
             FXRouter.goTo("students-table");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-
     @FXML
     public void onGiveScoreButtonClick() {
         if (selectedStudent != null) {

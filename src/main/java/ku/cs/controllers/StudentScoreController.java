@@ -67,7 +67,25 @@ public class StudentScoreController {
     }
 
     @FXML
-    public void handleBackToStudentsTableButton() {
+    protected void onHelloButtonClick() {
+        try {
+            FXRouter.goTo("hello");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    void goToListView() {
+        try {
+            FXRouter.goTo("student-list");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    void goToTableView() {
         try {
             FXRouter.goTo("students-table");
         } catch (IOException e) {

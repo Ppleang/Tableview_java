@@ -7,20 +7,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.StudentsTableController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F8E4E2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.StudentsTableController">
    <children>
-      <TableView fx:id="studentsTableView" layoutX="63.0" layoutY="106.0" prefHeight="268.0" prefWidth="478.0">
+      <TableView fx:id="studentsTableView" layoutX="101.0" layoutY="117.0" prefHeight="219.0" prefWidth="397.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <Label layoutX="63.0" layoutY="68.0" text="Student List" textFill="#6092cf">
+      <Label layoutX="154.0" layoutY="64.0" text="STUDENT TABLE">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="Bell MT Bold" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="490.0" layoutY="36.0" mnemonicParsing="false" onAction="#goToStudentList" text="Back" />
+       <Button layoutX="310.0" layoutY="20.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="20.0" prefWidth="80.0" stylesheets="@btn-style.css" text="HOME" textAlignment="CENTER" textFill="#514747">
+           <font>
+               <Font name="Bell MT Bold" size="16.0" />
+           </font>
+       </Button>
+       <Button layoutX="405.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToListView" prefHeight="20.0" prefWidth="80.0" stylesheets="@btn-style.css" text="LIST" textAlignment="CENTER" textFill="#514747">
+           <font>
+               <Font name="Bell MT Bold" size="16.0" />
+           </font>
+       </Button>
+       <Button layoutX="500.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToTableView" prefHeight="20.0" prefWidth="80.0" stylesheets="@btn-style.css" text="TABLE" textAlignment="CENTER" textFill="#514747">
+           <font>
+               <Font name="Bell MT Bold" size="16.0" />
+           </font>
+       </Button>
    </children>
 </AnchorPane>

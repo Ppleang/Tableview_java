@@ -50,12 +50,11 @@ public class Student {
         return score;
     }
 
+    // to csv file
     @Override
     public String toString() {
-        return "{" +
-                "id: '" + id + '\'' +
-                ", name: '" + name + '\'' +
-                ", score: " + score +
-                '}';
+        return "id: " + id + ',' +
+                "name: " + name + ',' +
+                "score: " + score;
     }
 }

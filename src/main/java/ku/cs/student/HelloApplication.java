@@ -9,9 +9,13 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXRouter.bind(this, stage, "", 800, 600);
+        FXRouter.bind(this, stage, "", 600, 400);
+        stage.setMaxHeight(400);
+        stage.setMaxWidth(600);
+        stage.setHeight(400);
+        stage.setWidth(600);
         configRoute();
-        FXRouter.goTo("students-table");
+        FXRouter.goTo("hello");
     }
 
     public static void configRoute()

@@ -7,73 +7,78 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a0f3ed;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.StudentListController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F8E4E2;" stylesheets="@btn-style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.StudentListController">
    <children>
-      <ListView fx:id="studentListView" layoutX="59.0" layoutY="78.0" prefHeight="243.0" prefWidth="270.0" style="-fx-background-color: #ff89bf;" />
-      <Label layoutX="86.0" layoutY="23.0" prefHeight="44.0" prefWidth="191.0" text="Student List">
+      <Button layoutX="310.0" layoutY="20.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="20.0" prefWidth="80.0" stylesheets="@btn-style.css" text="HOME" textAlignment="CENTER" textFill="#514747">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="405.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToListView" prefHeight="20.0" prefWidth="80.0" stylesheets="@btn-style.css" text="LIST" textAlignment="CENTER" textFill="#514747">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="500.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToTableView" prefHeight="20.0" prefWidth="80.0" stylesheets="@btn-style.css" text="TABLE" textAlignment="CENTER" textFill="#514747">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Button>
+      <ListView fx:id="studentListView" layoutX="37.0" layoutY="91.0" prefHeight="250.0" prefWidth="270.0" style="-fx-background-color: #F8C9EB;" />
+      <Label layoutX="45.0" layoutY="36.0" prefHeight="44.0" prefWidth="254.0" text="STUDENT LIST">
          <font>
             <Font name="Bell MT Bold" size="32.0" />
          </font>
       </Label>
-      <Label layoutX="353.0" layoutY="67.0" text="Selected Student">
+      <Label layoutX="353.0" layoutY="90.0" text="Selected Student">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="340.0" layoutY="118.0" text="ID:">
+      <Label layoutX="340.0" layoutY="145.0" text="ID:">
          <font>
             <Font name="Bell MT Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="340.0" layoutY="162.0" text="Name:">
+      <Label layoutX="340.0" layoutY="195.0" text="Name:">
          <font>
             <Font name="Bell MT Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="341.0" layoutY="200.0" text="Score:">
+      <Label layoutX="341.0" layoutY="245.0" text="Score:">
          <font>
             <Font name="Bell MT Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="idLabel" layoutX="404.0" layoutY="118.0" text="idLabel">
+      <Label fx:id="idLabel" layoutX="435.0" layoutY="145.0" text="idLabel">
          <font>
             <Font name="Bell MT" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="nameLabel" layoutX="402.0" layoutY="162.0" text="nameLabel">
+      <Label fx:id="nameLabel" layoutX="435.0" layoutY="195.0" text="nameLabel">
          <font>
             <Font name="Bell MT" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="scoreLabel" layoutX="404.0" layoutY="200.0" text="scoreLabel">
+      <Label fx:id="scoreLabel" layoutX="435.0" layoutY="245.0" text="scoreLabel">
          <font>
             <Font name="Bell MT" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="406.0" layoutY="296.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Hello">
-         <font>
-            <Font name="Bell MT Bold" size="13.0" />
-         </font>
-      </Button>
-      <Label layoutX="339.0" layoutY="244.0" text="Give Score:">
+      <Label layoutX="339.0" layoutY="295.0" text="Give Score:">
          <font>
             <Font name="Bell MT Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="giveScoreTextField" layoutX="432.0" layoutY="242.0" prefHeight="26.0" prefWidth="66.0" />
-      <Label fx:id="errorLabel" layoutX="430.0" layoutY="268.0" text="errorLabel" textFill="#df1111">
-         <font>
-            <Font name="Bell MT Bold" size="15.0" />
-         </font>
-      </Label>
-      <Button layoutX="513.0" layoutY="244.0" mnemonicParsing="false" onAction="#onGiveScoreButtonClick" text="OK">
+      <TextField fx:id="giveScoreTextField" layoutX="435.0" layoutY="295.0" prefHeight="26.0" prefWidth="66.0" />
+      <Label fx:id="errorLabel" layoutX="407.0" layoutY="321.0" text="errorLabel" textFill="#df1111">
          <font>
             <Font name="Bell MT Bold" size="12.0" />
          </font>
-      </Button>
-      <Button layoutX="404.0" layoutY="335.0" mnemonicParsing="false" onAction="#goToStudentTable" text="Table">
+      </Label>
+      <Button layoutX="513.0" layoutY="295.0" mnemonicParsing="false" onAction="#onGiveScoreButtonClick" text="OK">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="Bell MT Bold" size="12.0" />
          </font>
       </Button>
    </children>
